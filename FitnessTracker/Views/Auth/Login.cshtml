@@ -1,0 +1,33 @@
+﻿@model FitnessTracker.ViewModels.LoginViewModel
+
+@{
+    ViewBag.Title = "User Login";
+}
+
+<div class="logIn">
+    <div class="col-md-12">
+        <form method="post" asp-controller="Auth" asp-action="LoginAction" class="container logInContainer">
+            <h1>Login</h1>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username"><b>Username</b></label>
+                <input asp-for="Username" class="form-control" placeholder="Username...">
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"><b>Password</b></label>
+                <input asp-for="Password" class="form-control" placeholder="Password..."/>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label asp-for="RememberMe">
+                        <input asp-for="RememberMe" />
+                        @Html.DisplayNameFor(m => m.RememberMe)
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn logInBtn">Login</button>
+        </form>
+    </div>
+</div>

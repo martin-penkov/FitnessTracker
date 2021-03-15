@@ -1,6 +1,4 @@
-﻿@model IEnumerable<BodyPart> 
-
-@{
+﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
@@ -18,15 +16,9 @@
 <table class="tg">
     <thead>
         <tr>
-        <th class="tg-0lax">Body Parts:</th>
+        <th class="tg-0lax"></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var bodyPart in Model)
-        {
-            <tr>
-                <td class="tg-0lax">@bodyPart.Name</td>
-            </tr>
-        }
     </tbody>
 </table>

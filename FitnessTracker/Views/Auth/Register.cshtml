@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<div class="bg-img">
+    <form asp-controller="Auth" asp-action="CreateUser" class="container registercontainer">
+        <h1>Register</h1>
+        <br />
+        <div class="formcontainer row">
+            <div class="formcontainer column">
+                <label for="First Name"><b>First name</b></label>
+                <input type="text" name="FirstName" placeholder="First name..."
+                       class="form-control" required>
+
+                <label for="Last Name"><b>Last name</b></label>
+                <input type="text" name="LastName" placeholder="Last name..."
+                       class="form-control" required>
+
+                <label for="Gender"><b>Gender</b></label><br />
+                <label for="maleBtn">Male</label>
+                <input type="radio" id="maleBtn" name="Gender" value="Male" /><br />
+                <label for="femaleBtn">Female</label> 
+                <input type="radio" id="femaleBtn" name="Gender" value="Female" />
+                <br />
+
+                <label for="Age"><b>Age</b></label>
+                <input type="number" min="1" max="120" name="Age" placeholder="Age..."
+                       class="form-control" required>
+            </div>
+            <div class="formcontainer column">
+                <label for="Weight"><b>Weight</b></label>
+                <input type="number" min="1" max="1000" name="Weight" placeholder="Your weight in kg..."
+                       class="form-control" required>
+
+                <label for="Height"><b>Height</b></label>
+                <input type="number" min="1" max="300" name="Height" placeholder="Your height in cm..."
+                       class="form-control" required>
+
+                <label for="Username"><b>Username</b></label>
+                <input type="text" name="Username" placeholder="Username..."
+                       class="form-control" required>
+
+                <label for="Password"><b>Password</b></label>
+                <input type="password" name="Password" placeholder="Password..."
+                       class="form-control" required>
+            </div>
+        </div>
+        <button type="submit" class="btn regBtn">Register</button>
+    </form>
+</div>

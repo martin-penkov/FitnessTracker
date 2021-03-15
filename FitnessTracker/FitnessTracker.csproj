@@ -6,6 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\images\68793743f295773306731c53450716cc.jpg" />
+    <Content Remove="wwwroot\images\gym-routine.jpg" />
+    <Content Remove="wwwroot\images\photo-1574680096145-d05b474e2155.jpg" />
+    <Content Remove="wwwroot\images\photo-1581009146145-b5ef050c2e1e.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.3">
@@ -22,8 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\StaticFiles\images\Building-a-Home-Gym.jpg" />
-    <None Include="wwwroot\StaticFiles\images\gym-routine.jpg" />
+    <None Include="wwwroot\images\Building-a-Home-Gym.jpg" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,46 @@
+﻿@model FitnessTracker.ViewModels.FoodHistoryViewModel
+@{
+    ViewData["Title"] = "Food History";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #main {
+          margin-top: 0% !important
+    }
+</style>
+<div class="ml-4 mr-4 h-100">
+    <div class="row d-flex h-100">
+        <partial name="DashboardSidebarPartial"/>
+        <div class="col-10">
+            <div class="limiter">
+                <div class="container-table100">
+                    <div class="wrap-table100">
+                        <div class="table100">
+                            <table class="table">
+                                <thead>
+                                <tr class="table100-head">
+                                    <th style="width: 35%">Date</th>
+                                    <th style="width: 35%">Name</th>
+                                    <th style="width: 15%">Calories</th>
+                                    <th style="width: 15%">Protein</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach (var food in Model.foods)
+                                {
+                                    <tr class="@(@food.isFromToday ? "foodIsFromToday" : "")">
+                                        <td style="width: 15%">@food.DateAdded</td>
+                                        <td style="width: 15%">@food.Name</td>
+                                        <td style="width: 15%">@food.Calories</td>
+                                        <td style="width: 15%">@food.Protein</td>
+                                    </tr>
+                                }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

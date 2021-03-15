@@ -1,0 +1,64 @@
+﻿@model FitnessTracker.ViewModels.CreateFoodViewModel
+@{
+    ViewData["Title"] = "Add Food";
+}
+
+<div id="startfoodpage">
+    <div style="text-align:center">
+        <div style="color:white"><h1>Food Dispenser</h1></div>
+    </div>
+
+    <div style="background-color: white; height: 400px;width:800px;position: absolute; margin-left:40px; margin-top: 5px">
+        <p><h3 style="color:black; text-align:center">Select the type of food</h3></p>
+        <form asp-action="AddPreAddedFood">
+            <div style="margin-left:50px; margin-right:50px">
+                <table id="tblFoods" cellpadding="0" cellspacing="0" class="table table-responsive">
+                    <thead>
+                        <tr style="background-color: #F5DFED">
+                            <th style="width:200px">
+                                Food
+                            </th>
+                            <th style="width:200px">Number</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr>
+
+                            <td>
+                                <select id="selectstyling" name="Name" asp-items="@(new SelectList(Model.uniqueFoods, "Name"))">
+                                    <option> Choose from already added foods... </option>
+                                </select>
+
+                            </td>
+                            <td>
+                                <input type="number" name="Number" id="txtvalues"/>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <input type="submit" id="btnSave" value="Add" class="btn btn-block btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+
+<form asp-action="AddFoodAction">
+    <label for="Name">Name</label>
+    <input type="text" name="Name" style=" width:100px" />
+    <label for="Calories">Calories</label>
+    <input type="number" name="Calories" style=" width:100px" />
+    <label for="Fat">Fat</label>
+    <input type="number" name="Fat" style=" width:100px" />
+    <label for="Protein">Protein</label>
+    <input type="number" name="Protein" style=" width:100px" />
+    <label for="Carbohydrates">Carbohydrates</label>
+    <input type="number" name="Carbohydrates" style=" width:100px" />
+    <button type="submit">Create Food</button>
+</form>
+<br />

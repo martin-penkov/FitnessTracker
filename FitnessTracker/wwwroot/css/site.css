@@ -2,72 +2,75 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
 }
 /*
 .mainDiv {
@@ -77,6 +80,7 @@ body {
     width: 50%; 
 }
 */
+/*Insert a background image in home page*/
 #bghomepage {
     /* The image used */
     background: url("/images/homephoto.jpeg") no-repeat center center;
@@ -88,7 +92,7 @@ body {
     background-size: cover;
 }
 
-html,body {
+html, body {
     height: 100%;
     width: 100%;
 }
@@ -98,7 +102,497 @@ html,body {
     height: 100%;
 }
 
-.container-fluid{
+.container-fluid {
     height: 100%;
     width: 100%;
+}
+
+/*Insert a background image in Register page*/
+.bg-img {
+    /* The image used */
+    background-image: url(/images/Building-a-Home-Gym.jpg);
+    /* Control the height of the image */
+    min-height: 800px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Add styles to the form container */
+.registercontainer {
+    position: absolute;
+    left: 0;
+    margin: 70px;
+    max-width: 600px;
+    padding: 50px;
+    background-color: white;
+}
+
+.formcontainer.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=number] {
+    width: 100%;
+    padding: 15px;
+    margin: 4px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    width: 75%;
+    border-color: black;
+    border-radius: 25px;
+    border-width: 1.5px;
+}
+
+    input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+/* Set a style for the submit button */
+.regBtn {
+    background-color: black;
+    color: white;
+    padding: 14px 40px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+    .regBtn:hover {
+        opacity: 1;
+    }
+
+.mycols {
+    border: 5px;
+}
+
+
+/* Button Styles */
+
+.button.regbtn {
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #BFC0C0;
+    margin: 20px 20px 20px 20px;
+    color: #BFC0C0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+a {
+    color: #BFC0C0;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/*Login page*/
+/*Insert a background image in Login page*/
+.logIn {
+    /* The image used */
+    background-image: url(/images/wp2639536.jpg);
+    /* Control the height of the image */
+    min-height: 880px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.logInContainer {
+    position: absolute;
+    left: 0;
+    margin: 100px;
+    max-width: 600px;
+    padding: 50px;
+    background-color: white;
+}
+
+/* Set a style for the submit button */
+.logInBtn {
+    background-color: black;
+    color: white;
+    padding: 14px 40px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+    .logInBtn:hover {
+        opacity: 1;
+    }
+
+.button.logInBtn {
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #BFC0C0;
+    margin: 20px 20px 20px 20px;
+    color: #BFC0C0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+/* dashboard button */
+
+#button-2 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+    #button-2 div.innerText {
+        position: relative;
+        transition: all .35s ease-Out;
+    }
+
+#slide {
+    width: 100%;
+    height: 100%;
+    left: -200px;
+    background: #BFC0C0;
+    position: absolute;
+    transition: all .35s ease-Out;
+    bottom: 0;
+}
+
+#button-2:hover #slide {
+    left: 0;
+}
+
+#button-2:hover div.innerText {
+    color: #2D3142;
+}
+
+html, body {
+    height: 100%
+}
+
+.dashboard {
+    flex: auto;
+    padding-bottom: 2.5rem;
+}
+
+.mainFooter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+/*radio buttons dashboard*/
+
+@keyframes click-wave {
+    0% {
+        height: 40px;
+        width: 40px;
+        opacity: 0.35;
+        position: relative;
+    }
+
+    100% {
+        height: 200px;
+        width: 200px;
+        margin-left: -80px;
+        margin-top: -80px;
+        opacity: 0;
+    }
+}
+
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+}
+
+    .option-input:hover {
+        background: #9faab7;
+    }
+
+    .option-input:checked {
+        background: #40e0d0;
+    }
+
+        .option-input:checked::before {
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            content: '✔';
+            display: inline-block;
+            font-size: 26.66667px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .option-input:checked::after {
+            -webkit-animation: click-wave 0.65s;
+            -moz-animation: click-wave 0.65s;
+            animation: click-wave 0.65s;
+            background: #40e0d0;
+            content: '';
+            display: block;
+            position: relative;
+            z-index: 100;
+        }
+
+    .option-input.radio {
+        border-radius: 50%;
+    }
+
+        .option-input.radio::after {
+            border-radius: 50%;
+        }
+/*The white box in Making Exe page.*/
+.container1 {
+    position: absolute;
+    margin: 120px;
+    width: 750px;
+    height: 550px;
+    margin-top: 120px;
+    background-color: white;
+}
+
+
+/*table css */
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-table100 {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: #F5DFED;
+    background: -webkit-linear-gradient(45deg, #F5DFED, #99A7A3);
+    background: -o-linear-gradient(45deg, #F5DFED, #99A7A3);
+    background: -moz-linear-gradient(45deg, #F5DFED, #99A7A3);
+    background: linear-gradient(45deg, #F5DFED, #99A7A3);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 33px 30px;
+}
+
+.wrap-table100 {
+    width: 95%;
+    height: 90%
+}
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+    table * {
+        position: relative;
+    }
+
+    table td, table th {
+        padding-left: 8px;
+    }
+
+    table thead tr {
+        height: 60px;
+        background: #36304a;
+    }
+
+    table tbody tr {
+        height: 50px;
+    }
+
+table tbody tr:last-child {
+    border: 0;
+}
+
+table td, table th {
+    text-align: left;
+}
+
+table td.l, table th.l {
+    text-align: right;
+}
+
+table td.c, table th.c {
+    text-align: center;
+}
+
+table td.r, table th.r {
+    text-align: center;
+}
+
+
+.table100-head th {
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: unset;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tbody tr {
+    font-family: OpenSans-Regular;
+    font-size: 15px;
+    color: #808080;
+    line-height: 1.2;
+    font-weight: unset;
+}
+
+    tbody tr:hover {
+        color: #555555;
+        background-color: #f5f5f5;
+        cursor: pointer;
+    }
+
+
+@media screen and (max-width: 992px) {
+    table {
+        display: block;
+    }
+
+        table > *, table tr, table td, table th {
+            display: block;
+        }
+
+        table thead {
+            display: none;
+        }
+
+        table tbody tr {
+            height: auto;
+            padding: 37px 0;
+        }
+
+            table tbody tr td {
+                padding-left: 40% !important;
+                margin-bottom: 24px;
+            }
+
+                table tbody tr td:last-child {
+                    margin-bottom: 0;
+                }
+
+                table tbody tr td:before {
+                    font-family: OpenSans-Regular;
+                    font-size: 14px;
+                    color: #999999;
+                    line-height: 1.2;
+                    font-weight: unset;
+                    position: absolute;
+                    width: 40%;
+                    left: 30px;
+                    top: 0;
+                }
+
+                table tbody tr td:nth-child(1):before {
+                    content: "Date";
+                }
+
+                table tbody tr td:nth-child(2):before {
+                    content: "Name";
+                }
+
+                table tbody tr td:nth-child(3):before {
+                    content: "Calories";
+                }
+
+                table tbody tr td:nth-child(4):before {
+                    content: "Protein";
+                }
+
+
+    tbody tr {
+        font-size: 14px;
+    }
+}
+@media (max-width: 576px) {
+    .container-table100 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/*today food markings*/
+tr.foodIsFromToday {
+    background-color: #A9D267 !important
+}
+
+/*food creation page stylization*/
+
+#startfoodpage {
+    /* The image used */
+    background-image: url(../images/IMG_8392.webp);
+    background-repeat: no-repeat;
+    /* Full height */
+    display: table;
+    height: 525px;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-size: cover;
+}
+
+#selectstyling {
+    margin-left: -10px;
+    margin-top: 7px;
+    height: 50px;
 }
