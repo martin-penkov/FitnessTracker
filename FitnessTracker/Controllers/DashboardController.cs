@@ -25,11 +25,17 @@ namespace FitnessTracker.Controllers
         }
         public IActionResult RenderMain()
         {
-
             user = _db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
             var returnView = new InsightsViewModel();
             returnView.RequiredCalories = GetMaintainCalories();
             returnView.currentDailyCalories = GetCurrentUserCalorieCount();
+            returnView.userWorkouts = _db.Workouts
+                .Where(w => w.UserId == user.Id)
+                .Select(w => new InsightWorkoutsViewModel()
+                {
+                    Name = w.Name,
+                    ExerciseCount = w.Exercises.Count
+                }).ToList();
 
             return View("GeneralPage", returnView);
         }

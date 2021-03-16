@@ -1,0 +1,21 @@
+﻿<div class="limiter">
+    <div class="wrap-table100">
+        <div class="table100">
+            <table class="tableWorkouts">
+                <thead>
+                <tr class="table100-head">
+                    <th style="width: 60%">Name</th>
+                    <th style="width: 40%">Count of exercises</th>
+                </tr>
+                </thead>
+                @foreach (var workout in Model.userWorkouts)
+                {
+                    <tr class="backgroundColorWorkout">
+                        <td style="width: 60%">@workout.Name</td>
+                        <td style="width: 40%;">@workout.ExerciseCount</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

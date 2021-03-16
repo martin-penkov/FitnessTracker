@@ -355,14 +355,14 @@ html, body {
     }
 
     .option-input:checked {
-        background: #40e0d0;
+        background: #49666A;
     }
 
         .option-input:checked::before {
             height: 40px;
             width: 40px;
             position: absolute;
-            content: '✔';
+            content: '✓';
             display: inline-block;
             font-size: 26.66667px;
             text-align: center;
@@ -373,7 +373,7 @@ html, body {
             -webkit-animation: click-wave 0.65s;
             -moz-animation: click-wave 0.65s;
             animation: click-wave 0.65s;
-            background: #40e0d0;
+            background: #B3D1D9;
             content: '';
             display: block;
             position: relative;
@@ -596,3 +596,10 @@ tr.foodIsFromToday {
     margin-top: 7px;
     height: 50px;
 }
+
+.backgroundColorWorkout {
+    background-color: #DFE3EE !important;
+}
+    .backgroundColorWorkout:hover {
+        background-color: #E8DBCB !important
+    }

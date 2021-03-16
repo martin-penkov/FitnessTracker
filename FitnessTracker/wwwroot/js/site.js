@@ -10,3 +10,13 @@ function multiplyActivityLevel(activityLevel, baseCalorieValue, currentDailyCals
     var remainingCalElement = document.getElementsByClassName("remainingCalories")[0];
     remainingCalElement.innerHTML = Math.round((Number(recommendedCalElement.innerHTML) - currentDailyCals) * 100) / 100;
 }
+
+function AddNewDropdown() {
+    var mainContainer = document.getElementsByClassName("addExerciseDropdowns")[0]
+    var sampleValueHTML = document.getElementsByClassName("sampleValue")[0].innerHTML
+    mainContainer.innerHTML += sampleValueHTML
+}
+
+function deleteCurrentParent() {
+
+}

@@ -16,5 +16,6 @@ namespace FitnessTracker.Models
         public virtual BodyPart Bodypart { get; set; }
         public virtual Category Category { get; set; }
         public virtual User User { get; set; }
+        public virtual ICollection<Workout> Workouts { get; set; }
     }
 }

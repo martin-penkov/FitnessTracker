@@ -17,6 +17,7 @@ namespace FitnessTracker.Data
         public DbSet<BodyPart> BodyParts { get; set; }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Workout> Workouts { get; set; }
 
         public FitnessTrackerDBContext(DbContextOptions<FitnessTrackerDBContext> options)
             : base(options)

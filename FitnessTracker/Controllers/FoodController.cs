@@ -107,9 +107,9 @@ namespace FitnessTracker.Controllers
             return foodData;
         }
 
-        public IActionResult CreateCustomFood(AddCustomFoodViewModel foodInputData)
-        {
-
-        }
+        //public IActionResult CreateCustomFood(AddCustomFoodViewModel foodInputData)
+        //{
+            
+        //}
     }
 }
