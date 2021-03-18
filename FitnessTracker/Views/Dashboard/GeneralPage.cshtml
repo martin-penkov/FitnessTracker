@@ -3,45 +3,69 @@
     ViewData["Title"] = "Dashboard";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<div class="ml-4 mr-4 h-100">
-    <div class="row d-flex h-100">
-        <partial name="DashboardSidebarPartial"/>
-        <div class="col-6 mycols border-left border-right">
-            <h1>@Model.currentDailyCalories/<div class="dailyCaldiv">@Model.RequiredCalories kcal</div></h1>
-            <div>
-                <h3>Remaining Recommended Calories:<div class="remainingCalories">@Model.RemainingCalories</div></h3>
-            </div>
-            <div class="activityLevel">
-                <label>
-                    <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.2, @Model.RequiredCalories, @Model.currentDailyCalories)" />
-                    Sedentary lifestyle
-                </label> <br />
-                <label>
-                    <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.4, @Model.RequiredCalories, @Model.currentDailyCalories)" checked />
-                    Usual
-                </label><br />
-                <label>
-                    <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.6, @Model.RequiredCalories, @Model.currentDailyCalories)" />
-                    Moderate Exercise
-                </label><br />
-                <label>
-                    <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.8, @Model.RequiredCalories, @Model.currentDailyCalories)" />
-                    Very active lifestyle
-                </label>
-            </div>
+<div style="background: url(../images/862202.png);
+         background-repeat: no-repeat;
+         height: 100%;
+         width: 100%;
+         background-position: center;
+         background-size: cover;
+         position: relative;">
+    <style>
+        .container4 {
+            position: center;
+            width: 910px;
+            height: 800px;
+            margin-bottom: 100px;
+            background-color: white;
+            border-radius: 25px;
+            margin-left:10px;
+        }
+    </style>
+    <br />
+    <div class="ml-4 mr-4 h-100">
+        <div class="row d-flex h-100">
+            <partial name="DashboardSidebarPartial" />
             
-            <div class="statsButtons">
-                <a asp-controller="Food" asp-action="FoodHistory" style="text-decoration: none">
-                    <div class="button regbtn" id="button-2">
-                        <div id="slide"></div>
-                        <div class="innerText"><i class="fas fa-book-open"></i> Food History</div>
+            <div class="">
+                <div class="container4">
+                    <h1>@Model.currentDailyCalories/<div class="dailyCaldiv">@Model.RequiredCalories kcal</div></h1>
+                    <div>
+                        <h3>Remaining Recommended Calories:<div class="remainingCalories">@Model.RemainingCalories</div></h3>
                     </div>
-                </a>
+                    <div class="activityLevel">
+
+                        <label>
+                            <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.2, @Model.RequiredCalories, @Model.currentDailyCalories)" />
+                            Sedentary lifestyle
+                        </label> <br />
+                        <label>
+                            <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.4, @Model.RequiredCalories, @Model.currentDailyCalories)" checked />
+                            Usual
+                        </label><br />
+                        <label>
+                            <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.6, @Model.RequiredCalories, @Model.currentDailyCalories)" />
+                            Moderate Exercise
+                        </label><br />
+                        <label>
+                            <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.8, @Model.RequiredCalories, @Model.currentDailyCalories)" />
+                            Very active lifestyle
+                        </label>
+                    </div>
+
+                    <div class="statsButtons">
+                        <a asp-controller="Food" asp-action="FoodHistory" style="text-decoration: none">
+                            <div class="button regbtn" id="button-2">
+                                <div id="slide"></div>
+                                <div class="innerText"><i class="fas fa-book-open"></i> Food History</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-3 mycols">
-            <partial name="WorkoutDashboard"/>
+
+            <div class="col-3 mycols">
+                <partial name="WorkoutDashboard" />
+            </div>
         </div>
     </div>
 </div>

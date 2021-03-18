@@ -37,6 +37,8 @@ namespace FitnessTracker.Controllers
 
         public IActionResult AddFoodAction(Food food)
         {
+            food.UserId = _db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name).Id;
+            food.DateAdded = DateTime.Now;
             _db.Foods.Add(food);
             _db.SaveChanges();
             return RedirectToAction("RenderMain", "Dashboard");
@@ -106,10 +108,5 @@ namespace FitnessTracker.Controllers
             }
             return foodData;
         }
-
-        //public IActionResult CreateCustomFood(AddCustomFoodViewModel foodInputData)
-        //{
-            
-        //}
     }
 }

@@ -1,19 +1,109 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="container-fluid" id="bghomepage">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body class="homePageBgr">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-9">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
 
-    <div class="mt-5 mb-5 pt-5" id="homeFullScreen">
-        <div class="header-text text-center text-white">
-            <h1>Fitness Tracker</h1>
-            <div class="vertical-line"></div>
-            <p>
-                Some Random Text
-                <br />
-                Another random text.
-            </p>
-        </div><!-- End HeaderText -->
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 5</div>
+                        <img src="/images/1.jpg" style="width:100%">
+                        <div class="text myText">Focus on the weight you lift not the weight you lose</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 5</div>
+                        <img src="~/images/3.jpg" style="width:100%">
+                        <div class="text myText">Do it for the after selfie</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 5</div>
+                        <img src="/images/2.jpg" style="width:100%">
+                        <div class="text myText">Fall in love with taking care of yourself-mind, body and spirit</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 5</div>
+                        <img src="/images/4.jpg" style="width:100%">
+                        <div class="text myText">All progress takes place outside the comfort zone</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 5</div>
+                        <img src="/images/5.jpg" style="width:100%">
+                        <div class="text myText">If you think lifting is dangerous, try being weak</div>
+                    </div>
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="d-flex flex-column h-100">
+                    <div class="flex-fill p-2">
+                        <button id="homeToRegister" class="btn homeToPage h-100"><p>Don't have an account?</p><p><b>Register here</b></p></button>
+                    </div>
+                    <div class="flex-fill p-2">
+                        <button id="homeToLogin" class="btn homeToPage h-100"><p>You have already created one?</p><p><b>Log in here</b></p></button>
+                    </div>
+                </div>
+            </div>
     </div>
 
-</div>
+
+
+
+
+    <script type="text/javascript">
+            document.getElementById("homeToRegister").onclick = function () {
+                location.href = "/Auth/Register?area=Identity";
+            };
+    </script>
+
+    <script type="text/javascript">
+            document.getElementById("homeToLogin").onclick = function () {
+                location.href = "/Auth/Login?area=Identity";
+            };
+    </script>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 4000); // Change image every 4 seconds
+        }
+    </script>
+</body>
+</html>

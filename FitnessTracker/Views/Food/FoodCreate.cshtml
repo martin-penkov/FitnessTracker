@@ -3,62 +3,57 @@
     ViewData["Title"] = "Add Food";
 }
 
-<div id="startfoodpage">
-    <div style="text-align:center">
-        <div style="color:white"><h1>Food Dispenser</h1></div>
-    </div>
+<div style="background: url(../images/something3.jpg);
+     background-repeat: no-repeat;
+     height: 100%;
+     width: 100%;
+     background-position: center;
+     background-size: cover;
+     position: relative;">
 
-    <div style="background-color: white; height: 400px;width:800px;position: absolute; margin-left:40px; margin-top: 5px">
-        <p><h3 style="color:black; text-align:center">Select the type of food</h3></p>
-        <form asp-action="AddPreAddedFood">
-            <div style="margin-left:50px; margin-right:50px">
-                <table id="tblFoods" cellpadding="0" cellspacing="0" class="table table-responsive">
-                    <thead>
-                        <tr style="background-color: #F5DFED">
-                            <th style="width:200px">
-                                Food
-                            </th>
-                            <th style="width:200px">Number</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                    <tfoot>
-                        <tr>
 
-                            <td>
-                                <select id="selectstyling" name="Name" asp-items="@(new SelectList(Model.uniqueFoods, "Name"))">
-                                    <option> Choose from already added foods... </option>
-                                </select>
+    <div class="container1" style="height:90%; margin-top:40px; width:800px">
+        <div style="text-align:center">
 
-                            </td>
-                            <td>
-                                <input type="number" name="Number" id="txtvalues"/>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
-                <input type="submit" id="btnSave" value="Add" class="btn btn-block btn-success" />
+            <p><h2 style="color:black; text-align:center"><strong>Select the type of food</strong></h2></p>
+            <form asp-action="AddPreAddedFood">
+                <div style="margin-left:50px; margin-right:50px">
+                    <select id="selectstyling" name="Name" asp-items="@(new SelectList(Model.uniqueFoods, "Name"))">
+                        <option> Choose from already added foods... </option>
+                    </select>
+                    <label for="Number" style="margin-left:50px"><strong>Number</strong></label>
+                    <input type="number" name="Number" id="txtvalues" style="width:70px;margin-right:50px" />
+
+                    <input type="submit" id="btnSave" value="Add" class="btn btn-block btn-success" 
+                           style="background-color:black;border-radius: 20px" />
+                </div>
+            </form>
+        </div>
+        <br /><br /><hr />
+        <p><h2 style="color:black; text-align:center"><strong>Add Custom Food</strong></h2></p>
+
+        <form asp-action="AddFoodAction">
+            <label for="Name" style="width:90px; margin-left:70px"><h3>Name</h3></label>
+            <input type="text" name="Name" size="10" style=" width:500px;" />
+            <div class="formcontainer column" style="margin-left:200px">
+                <label for="Calories"><strong>Calories</strong></label>
+                <input type="number" name="Calories" style=" width:100px" />
+                <br />
+                <label for="Fat" style="margin-left:35px"><strong>Fat</strong></label>
+                <input type="number" name="Fat" style=" width:100px" />
             </div>
+            <div class="formcontainer column" style="margin-left:-200px">
+                <label for="Protein" style="margin-left:50px"><strong>Protein</strong></label>
+                <input type="number" name="Protein" style=" width:100px" />
+                <br />
+                <label for="Carbohydrates"><strong>Carbohydrates</strong></label>
+                <input type="number" name="Carbohydrates" style=" width:100px" />
+            </div>
+            <input type="submit" id="btnSave" value="Create Food" class="btn btn-block btn-success"
+                   style="width:700px;margin-left:50px;background-color:black;border-radius: 20px" />
         </form>
     </div>
+    <button class="btn btn-primary" style="border-radius:20px;border-color:white;background-color:white;position:relative;top:652px;left:1300px;">
+        <a href="FoodHistory" style="color:black;"><strong>Check Food History</strong></a>
+    </button>
 </div>
-
-<br />
-<br />
-<br />
-
-<form asp-action="AddFoodAction">
-    <label for="Name">Name</label>
-    <input type="text" name="Name" style=" width:100px" />
-    <label for="Calories">Calories</label>
-    <input type="number" name="Calories" style=" width:100px" />
-    <label for="Fat">Fat</label>
-    <input type="number" name="Fat" style=" width:100px" />
-    <label for="Protein">Protein</label>
-    <input type="number" name="Protein" style=" width:100px" />
-    <label for="Carbohydrates">Carbohydrates</label>
-    <input type="number" name="Carbohydrates" style=" width:100px" />
-    <button type="submit">Create Food</button>
-</form>
-<br />

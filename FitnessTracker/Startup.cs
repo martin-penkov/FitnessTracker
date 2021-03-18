@@ -39,8 +39,8 @@ namespace FitnessTracker
             {
                 options.Password.RequireDigit = false;
                 options.Password.RequiredLength = 5;
-                options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequireLowercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireLowercase = false;
                 options.Password.RequireUppercase = false;
             });
         }

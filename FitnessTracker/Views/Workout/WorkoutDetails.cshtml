@@ -1,0 +1,43 @@
+﻿@model FitnessTracker.ViewModels.WorkoutDetailsViewModel
+@{
+    ViewData["Title"] = "Workout Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="ml-4 mr-4 h-100">
+    <div class="row d-flex h-100">
+        <partial name="DashboardSidebarPartial" />
+        <div class="col-10">
+            <div class="limiter">
+                <div class="container-table100">
+                    <div class="wrap-table100">
+                        <div class="table100">
+                            <h1>@Model.Name</h1>
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr class="table100-head">
+                                        <th style="width: 40%">Exercise Name</th>
+                                        <th style="width: 30%">Bodypart</th>
+                                        <th style="width: 30%">Category</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var exercise in Model.Exercises)
+                                    {
+                                        <tr class="backgroundColorWorkout">
+                                            <td style="width: 40%">@exercise.Name</td>
+                                            <td style="width: 30%">@exercise.Bodypart.Name</td>
+                                            <td style="width: 30%">@exercise.Category.Name</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -2,8 +2,24 @@
 @{
     ViewData["Title"] = "Create Workout";
 }
-<div>
-    <form asp-controller="Workout" asp-action="CreateWorkoutAction" class="container1">
+<div style="background: url(../images/workoutpageimg.jpg);
+     background-repeat: no-repeat;
+     height: 100%;
+     width: 100%;
+     background-position: center;
+     background-size: cover;
+     position: relative;">
+    <style>
+        .container2 {
+            position: absolute;
+            margin: 120px;
+            width: 750px;
+            height: 850px;
+            margin-top: 120px;
+            background-color: white;   
+        }
+    </style>
+    <form asp-controller="Workout" asp-action="CreateWorkoutAction" class="container2">
         <br />
         <div style="margin-left:35px; margin-top:10px">
             <h1>Create Workout</h1>
@@ -19,7 +35,7 @@
             <label for="Id"><h4>Add your exercises</h4></label>
             <div class="addExerciseDropdowns col-md-5">
                 <div class="sampleValue">
-                    <div class="form-group" style="margin-left: 20px; width: 670px;">
+                    <div class="form-group" style="margin-left: 20px; width: 810px;">
                         <select asp-items="@(new SelectList(Model.uniqueExercises, "Name"))" name="ExerciseNames" class="col-10 form-control">
                             <option> Choose from your exercises... </option>
                         </select>
@@ -27,7 +43,9 @@
                     </div>
                 </div>
             </div>
-            <button type="button" onclick="AddNewDropdown()">Add new exercise...</button>
+            <br />
+            <button type="button" onclick="AddNewDropdown()" style="padding:10px 100px;border-radius: 20px; background-color: black; color: beige; font-weight: bold;font-size:15px" class="btn btn-primary">Add new exercise...</button>
+            <br />
             <br />
             <p align="center">
                 <button type="submit"

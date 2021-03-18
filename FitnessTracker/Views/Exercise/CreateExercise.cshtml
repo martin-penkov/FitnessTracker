@@ -24,11 +24,11 @@
             
             <div class="col-md-5">
                 <div class="form-group" style="margin-left: 20px; width:670px;">
-                    <label for="Id"><h4>Category</h4></label>
+                    <label for="Id"><h4>Bodypart</h4></label>
                     <select asp-items="@(new SelectList(Model.BodyParts,"Id", "Name"))" name="BodyPartId" class="form-control"></select>
                 </div>
                 <div class="form-group" style="margin-left: 20px; width:670px;">
-                    <label for="Id"><h4>Bodypart</h4></label>
+                    <label for="Id"><h4>Category</h4></label>
                     <select asp-items="@(new SelectList(Model.Category,"Id", "Name"))" name="CategoryId" class="form-control"></select>
                 </div>
             </div>      

@@ -72,26 +72,6 @@ body {
     white-space: nowrap;
     line-height: 60px; /* Vertically center the text there */
 }
-/*
-.mainDiv {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%; 
-}
-*/
-/*Insert a background image in home page*/
-#bghomepage {
-    /* The image used */
-    background: url("/images/homephoto.jpeg") no-repeat center center;
-    /* Full height */
-    display: table;
-    height: 100%;
-    width: 100%;
-    /* Center and scale the image nicely */
-    background-size: cover;
-}
-
 html, body {
     height: 100%;
     width: 100%;
@@ -102,6 +82,139 @@ html, body {
     height: 100%;
 }
 
+/*Home page*/
+* {
+    box-sizing: border-box;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    /*margin: 4px 100px 4px 50px;*/
+}
+.homePageBgr{
+    background-image: url(/images/862202.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+/* Hide the images by default */
+    .mySlides {
+    display: none;
+}
+
+/* Caption text */
+.text.myText {
+    color: white;
+    font-size: 30px;
+    background-color: black;
+    border-radius: 2px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    text-align: center;
+    font-family: Signpainter, serif;
+}
+
+/* Number text (1/5 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+    .active, .dot:hover {
+        background-color: lightslategray;
+    }
+
+/* Fading animation */
+.fade {
+    
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 3.9s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+.btn.homeToPage {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 32px 16px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 5px;
+    font-family: Signpainter, serif;
+}
+.btn.homeToPage:hover{
+    background-image: url(/images/user1.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    color:transparent;
+}
+/*.btn.homeToLogin {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 32px 16px;
+    cursor: pointer;
+    margin: 4px 100px 2px 100px;
+    display: block;
+}*/
+/*Register page*/
 .container-fluid {
     height: 100%;
     width: 100%;
@@ -387,12 +500,23 @@ html, body {
         .option-input.radio::after {
             border-radius: 50%;
         }
-/*The white box in Making Exe page.*/
+/*The white box in Exercise page.*/
 .container1 {
     position: absolute;
     margin: 120px;
     width: 750px;
     height: 550px;
+    margin-top: 120px;
+    background-color: white;
+}
+
+
+/*The white box in Workout page.*/
+.container2 {
+    position: absolute;
+    margin: 120px;
+    width: 750px;
+    height: 250px;
     margin-top: 120px;
     background-color: white;
 }
