@@ -10,59 +10,46 @@
          background-position: center;
          background-size: cover;
          position: relative;">
-    <style>
-        .container4 {
-            position: center;
-            width: 910px;
-            height: 800px;
-            margin-bottom: 100px;
-            background-color: white;
-            border-radius: 25px;
-            margin-left:10px;
-        }
-    </style>
     <br />
     <div class="ml-4 mr-4 h-100">
         <div class="row d-flex h-100">
-            <partial name="DashboardSidebarPartial" />
-            
-            <div class="">
-                <div class="container4">
-                    <h1>@Model.currentDailyCalories/<div class="dailyCaldiv">@Model.RequiredCalories kcal</div></h1>
-                    <div>
-                        <h3>Remaining Recommended Calories:<div class="remainingCalories">@Model.RemainingCalories</div></h3>
-                    </div>
-                    <div class="activityLevel">
+            <partial name="DashboardSidebarPartial"/>
+                <div class="rrcwhitecontainer">
+                    <div style="margin-left: 10px;">
+                        <h1>@Model.currentDailyCalories/<div class="dailyCaldiv">@Model.RequiredCalories kcal</div></h1>
+                        <div>
+                            <h3>Remaining Recommended Calories:<div class="remainingCalories">@Model.RemainingCalories</div></h3>
+                        </div>
+                        <div class="activityLevel">
 
-                        <label>
-                            <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.2, @Model.RequiredCalories, @Model.currentDailyCalories)" />
-                            Sedentary lifestyle
-                        </label> <br />
-                        <label>
-                            <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.4, @Model.RequiredCalories, @Model.currentDailyCalories)" checked />
-                            Usual
-                        </label><br />
-                        <label>
-                            <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.6, @Model.RequiredCalories, @Model.currentDailyCalories)" />
-                            Moderate Exercise
-                        </label><br />
-                        <label>
-                            <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.8, @Model.RequiredCalories, @Model.currentDailyCalories)" />
-                            Very active lifestyle
-                        </label>
-                    </div>
+                            <label>
+                                <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.2, @Model.RequiredCalories, @Model.currentDailyCalories)" />
+                                Sedentary lifestyle
+                            </label> <br />
+                            <label>
+                                <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.4, @Model.RequiredCalories, @Model.currentDailyCalories)" checked />
+                                Usual
+                            </label><br />
+                            <label>
+                                <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.6, @Model.RequiredCalories, @Model.currentDailyCalories)" />
+                                Moderate Exercise
+                            </label><br />
+                            <label>
+                                <input type="radio" class="option-input radio" name="interactActivity" onclick="multiplyActivityLevel(1.8, @Model.RequiredCalories, @Model.currentDailyCalories)" />
+                                Very active lifestyle
+                            </label>
+                        </div>
 
-                    <div class="statsButtons">
-                        <a asp-controller="Food" asp-action="FoodHistory" style="text-decoration: none">
-                            <div class="button regbtn" id="button-2">
-                                <div id="slide"></div>
-                                <div class="innerText"><i class="fas fa-book-open"></i> Food History</div>
-                            </div>
-                        </a>
+                        <div class="statsButtons">
+                            <a asp-controller="Food" asp-action="FoodHistory" style="text-decoration: none">
+                                <div class="button regbtn" id="button-2">
+                                    <div id="slide"></div>
+                                    <div class="innerText"><i class="fas fa-book-open"></i> Food History</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-
             <div class="col-3 mycols">
                 <partial name="WorkoutDashboard" />
             </div>

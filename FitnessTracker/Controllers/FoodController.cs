@@ -19,9 +19,10 @@ namespace FitnessTracker.Controllers
         }
         public IActionResult FoodHistory()
         {
+            var user = _db.Users.FirstOrDefault(u => User.Identity.Name == u.UserName);
             FoodHistoryViewModel foodData = new FoodHistoryViewModel()
             {
-                foods = GetAllUserFoods()
+                foods = GetAllUserFoods(user.Id)
             };
             return View(foodData);
         }
@@ -85,10 +86,9 @@ namespace FitnessTracker.Controllers
             return RedirectToAction("RenderMain", "Dashboard");
         }
 
-        public List<FoodDataViewModel> GetAllUserFoods()
+        public List<FoodDataViewModel> GetAllUserFoods(string userId)
         {
-            var user = _db.Users.FirstOrDefault(u => User.Identity.Name == u.UserName);
-            List<Food> userFoods = _db.Foods.Where(f => f.UserId == user.Id).ToList();
+            List<Food> userFoods = _db.Foods.Where(f => f.UserId == userId).ToList();
             userFoods = userFoods.OrderByDescending(f => f.DateAdded).ToList();
             var foodData = new List<FoodDataViewModel>();
             foreach (var userFood in userFoods)

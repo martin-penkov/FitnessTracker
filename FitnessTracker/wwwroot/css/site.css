@@ -373,7 +373,6 @@ a {
 
 
 /* dashboard button */
-
 #button-2 {
     position: relative;
     overflow: hidden;
@@ -509,16 +508,48 @@ html, body {
     margin-top: 120px;
     background-color: white;
 }
-
-
 /*The white box in Workout page.*/
-.container2 {
+.workoutwhitecontainer {
     position: absolute;
     margin: 120px;
     width: 750px;
-    height: 250px;
+    height: 850px;
     margin-top: 120px;
     background-color: white;
+}
+/*The white box in Add activity(Dashboard).*/
+.activitywhitecontainer {
+    position: absolute;
+    width: 290px;
+    height: 800px;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 25px;
+    margin-left: 10px;
+    border: 5px solid black;
+}
+/*The white box in Remaining Recommended Calories(Dashboard).*/
+.rrcwhitecontainer {
+    position: center;
+    width: 910px;
+    height: 800px;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 25px;
+    margin-left: 10px;
+    border: 5px solid black;
+}
+/*The white box in Remaining Recommended Calories(Dashboard).*/
+.workoutlistwhitecontainer {
+    position: absolute;
+    width: 415px;
+    height: 800px;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 16px;
+    margin-left: 10px;   
+    /*border: 5px solid #132257;*/
+    border: 5px solid black;
 }
 
 

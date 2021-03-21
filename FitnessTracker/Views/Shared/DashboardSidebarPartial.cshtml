@@ -1,34 +1,26 @@
 ﻿
-<style>
-    .container5 {
-        position: absolute;
-        width: 290px;
-        height: 800px;
-        margin-bottom: 100px;
-        background-color: white;
-        border-radius: 25px;
-        margin-left: 10px;
-    }
-</style>
-<div class="container5"></div>
+
+<div class="activitywhitecontainer"></div>
 <div class="col-2 mycols">
-    <h3 class="mb-5">Add activity</h3>
-    <a asp-controller="Food" asp-action="AddFood" style="text-decoration: none">
-        <div class="button regbtn" id="button-2">
-            <div id="slide"></div>
-            <div class="innerText"><i class="fas fa-utensils"></i> Food</div>
-        </div>
-    </a>
-    <a asp-controller="Exercise" asp-action="CreateExercise" style="text-decoration: none">
-        <div class="button regbtn" id="button-2">
-            <div id="slide"></div>
-            <div class="innerText"><i class="fas fa-dumbbell"></i> Exercise</div>
-        </div>
-    </a>
-    <a asp-controller="Workout" asp-action="CreateWorkout">
-        <div class="button regbtn" id="button-2">
-            <div id="slide"></div>
-            <div class="innerText"><i class="fas fa-plus"> Workout</i></div>
-        </div>
-    </a>
+    <div style="margin-left:10px; margin-top:10px;">
+        <h3 class="mb-5">Add activity</h3>
+        <a asp-controller="Food" asp-action="AddFood" style="text-decoration: none">
+            <div class="button regbtn" id="button-2">
+                <div id="slide"></div>
+                <div class="innerText"><i class="fas fa-utensils"></i> Food</div>
+            </div>
+        </a>
+        <a asp-controller="Exercise" asp-action="CreateExercise" style="text-decoration: none">
+            <div class="button regbtn" id="button-2">
+                <div id="slide"></div>
+                <div class="innerText"><i class="fas fa-dumbbell"></i> Exercise</div>
+            </div>
+        </a>
+        <a asp-controller="Workout" asp-action="CreateWorkout">
+            <div class="button regbtn" id="button-2">
+                <div id="slide"></div>
+                <div class="innerText"><i class="fas fa-plus"> Workout</i></div>
+            </div>
+        </a>
+    </div>
 </div>

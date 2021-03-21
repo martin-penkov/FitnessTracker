@@ -27,8 +27,8 @@ namespace FitnessTracker.Controllers
         {
             user = _db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
             var returnView = new InsightsViewModel();
-            returnView.RequiredCalories = GetMaintainCalories();
-            returnView.currentDailyCalories = GetCurrentUserCalorieCount();
+            returnView.RequiredCalories = GetMaintainCalories(user);
+            returnView.currentDailyCalories = GetCurrentUserCalorieCount(user);
             returnView.userWorkouts = _db.Workouts
                 .Where(w => w.UserId == user.Id)
                 .Select(w => new InsightWorkoutsViewModel()
@@ -40,7 +40,7 @@ namespace FitnessTracker.Controllers
             return View("GeneralPage", returnView);
         }
 
-        public double? GetMaintainCalories()
+        public double? GetMaintainCalories(User user)
         {
             //calculate BMR
             double defaultActivityLevel = 1.4;
@@ -59,7 +59,7 @@ namespace FitnessTracker.Controllers
             return BMR;
         }
 
-        public double? GetCurrentUserCalorieCount()
+        public double? GetCurrentUserCalorieCount(User user)
         {
             //to get daily calories we need to check if food has been added within the last 24 hours
             //before that we filter out all the user food using the relation between user and food tables in the db
